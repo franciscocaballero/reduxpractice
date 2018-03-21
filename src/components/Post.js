@@ -1,0 +1,19 @@
+import React, { Component } from 'react';
+
+
+class Post extends Component {
+  componentWillMount(){
+    console.log(123)
+  }
+  render() {
+    return (
+      <div>
+      <h1>POST</h1>
+      </div>
+    );
+  }
+}
+
+
+
+export default Post;
