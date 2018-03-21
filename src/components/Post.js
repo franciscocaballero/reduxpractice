@@ -2,9 +2,20 @@ import React, { Component } from 'react';
 
 
 class Post extends Component {
-  componentWillMount(){
-    console.log(123)
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: []
+    }
   }
+
+  componentWillMount(){
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    .then(data => console.log(data));
+  }
+  
   render() {
     return (
       <div>
